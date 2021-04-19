@@ -3,7 +3,7 @@ services:
   - docker
 
 before-install:
-   - docker build -t subhomay/node-test -f Dockerfile.dev .
+   - docker build -t subhomay/node-test -f Dockerfile .
 
 script:
   - docker run subhomay/node-test node index.js
