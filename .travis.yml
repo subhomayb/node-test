@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before-install:
+   - docker build -t subhomay/node-test -f dockerfile.dev .
+
+script:
+  - docker run subhomay/node-test node index.js
