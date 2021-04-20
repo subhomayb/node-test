@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "stable"
 os:
-  - centos 7
+  - linux
 env:
   global:
     - DBUS_SESSION_BUS_ADDRESS=/dev/null
