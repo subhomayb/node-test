@@ -6,4 +6,4 @@ before-install:
    - docker build -t subhomay/node-test -f Dockerfile .
 
 script:
-  - docker run subhomay/node-test npm subhomay/node-test -- --coverage
+  - docker run subhomay/node-test npm run test -- --coverage
