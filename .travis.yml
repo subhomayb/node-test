@@ -1,6 +1,13 @@
 language: node_js
 node_js:
   - "stable"
+os:
+  - centos 7
+env:
+  global:
+    - DBUS_SESSION_BUS_ADDRESS=/dev/null
+    - DISPLAY=:99.0
+    - CHROME_BIN=chromium-browser
 cache:
   directories:
     - "node_modules"
