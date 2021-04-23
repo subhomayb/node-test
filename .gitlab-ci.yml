@@ -2,6 +2,10 @@ image: docker:latest
 stages:
   - container
   - deploy
+services:
+  - docker:dind
+before_script:
+  - docker -u "subhomay" -p "lenovo@123"
 container:
   stage: container
   script:
