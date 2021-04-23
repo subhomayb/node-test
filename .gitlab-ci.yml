@@ -1,8 +1,13 @@
-image: node:latest
-test:
+image: docker:latest
+stages:
+  - container
+  - deploy
+container:
+  stage: container
   script:
-    - npm install
-    - node idex.js
-cache:
- paths:
-  - node_modules/
+    - docker build -t subhomay/testnode .
+deploy:
+  stage: deploy
+  script:
+    - docker run -p 3000:3000 subhomay/testnode
+    - docker image rm subhomay/testnode
